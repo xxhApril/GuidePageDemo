@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W52-bX-mBo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Guide View Controller-->
+        <scene sceneID="YoJ-0P-eJ1">
+            <objects>
+                <viewController storyboardIdentifier="GuideViewController" id="W52-bX-mBo" customClass="GuideViewController" customModule="GuidePageDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AiX-D8-GB9"/>
+                        <viewControllerLayoutGuide type="bottom" id="f8T-KC-NFn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QIA-fl-Fmv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADk-cw-ade">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqW-r3-CvX">
+                                        <rect key="frame" x="0.0" y="488" width="375" height="179"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpF-8U-9xe">
+                                                <rect key="frame" x="94" y="63.5" width="187" height="52"/>
+                                                <color key="backgroundColor" red="0.069781037409999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="187" id="5bS-1l-JO6"/>
+                                                    <constraint firstAttribute="height" constant="52" id="KSy-rw-DB5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" title="立即体验">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="beginAction:" destination="W52-bX-mBo" eventType="touchUpInside" id="xY1-VS-D8h"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rpF-8U-9xe" firstAttribute="centerX" secondItem="AqW-r3-CvX" secondAttribute="centerX" id="M81-jw-yNG"/>
+                                            <constraint firstAttribute="height" constant="179" id="dbr-9i-eOQ"/>
+                                            <constraint firstItem="rpF-8U-9xe" firstAttribute="centerY" secondItem="AqW-r3-CvX" secondAttribute="centerY" id="xjf-YO-cuH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AqW-r3-CvX" firstAttribute="centerX" secondItem="ADk-cw-ade" secondAttribute="centerX" id="6AF-Ez-qod"/>
+                                    <constraint firstItem="AqW-r3-CvX" firstAttribute="top" secondItem="ADk-cw-ade" secondAttribute="top" constant="488" id="8My-V4-Yhx"/>
+                                    <constraint firstAttribute="trailing" secondItem="AqW-r3-CvX" secondAttribute="trailing" id="CVy-Ob-BP3"/>
+                                    <constraint firstItem="AqW-r3-CvX" firstAttribute="width" secondItem="ADk-cw-ade" secondAttribute="width" id="Jn4-sP-ed4"/>
+                                    <constraint firstAttribute="bottom" secondItem="AqW-r3-CvX" secondAttribute="bottom" id="XIS-SR-Pfx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="W52-bX-mBo" id="Q9z-qR-CIq"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wlX-yh-cRw">
+                                <rect key="frame" x="127.5" y="617" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="SDO-sC-ITP"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ytp-1I-nMy"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ADk-cw-ade" firstAttribute="height" secondItem="QIA-fl-Fmv" secondAttribute="height" id="4HW-Ux-pib"/>
+                            <constraint firstItem="ADk-cw-ade" firstAttribute="centerY" secondItem="QIA-fl-Fmv" secondAttribute="centerY" id="6TK-qc-1Lk"/>
+                            <constraint firstItem="ADk-cw-ade" firstAttribute="width" secondItem="QIA-fl-Fmv" secondAttribute="width" id="9Ux-Om-WyV"/>
+                            <constraint firstAttribute="bottom" secondItem="wlX-yh-cRw" secondAttribute="bottom" constant="20" id="dJw-iq-6Ji"/>
+                            <constraint firstItem="wlX-yh-cRw" firstAttribute="centerX" secondItem="QIA-fl-Fmv" secondAttribute="centerX" id="nKV-DG-mDL"/>
+                            <constraint firstItem="ADk-cw-ade" firstAttribute="centerX" secondItem="QIA-fl-Fmv" secondAttribute="centerX" id="oOm-Cy-DOB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="wlX-yh-cRw" id="cAo-Ck-CFl"/>
+                        <outlet property="scrollView" destination="ADk-cw-ade" id="22o-7y-kVU"/>
+                        <outlet property="tasetView" destination="AqW-r3-CvX" id="KtK-aB-aPN"/>
+                        <outlet property="viewCenterLayout" destination="6AF-Ez-qod" id="prJ-Dl-Djw"/>
+                        <outlet property="viewHeightLayout" destination="dbr-9i-eOQ" id="DqL-0x-kOm"/>
+                        <outlet property="viewTopLayout" destination="8My-V4-Yhx" id="RhY-QV-z3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRB-4L-5q7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="145.27736131934034"/>
+        </scene>
+    </scenes>
+</document>
